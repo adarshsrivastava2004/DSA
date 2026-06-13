@@ -37,7 +37,24 @@ public class Sorting{
     }
 
     public static void insertionSort(int[] arr){
-        
+        //tc: O(n^2),sc: O(1),in-place yes(extra space), stable yes (same value k order ko maintain krta h)
+        //ek curr , ek sorted part aur ek unsorted part, ek currValue , ek prev
+        int n = arr.length;
+        //i =1 se start hoga kyuki 0 se start krne pr sorted part me ek element hoga ar prev = -1 nhi hoga
+        for(int i=1;i<n;i++){
+            int curr =i;
+            int prev = i-1;
+            int currValue = arr[i];
+            //jb currValue chota h prev wale element se to usko shift krte raho
+            while(prev>=0 && currValue< arr[prev]){
+                arr[prev+1]=arr[prev];
+                prev--;
+            }
+
+            //jb currValue bda hoga prev wale se tb place krenge..
+            //ab khali jgh aa chuki h..
+            arr[prev+1]=currValue;
+        }
     }
 
 
@@ -51,16 +68,16 @@ public class Sorting{
         //     System.out.print(i + " ");
         // }
 
-        selectionSort(arr);
-        System.out.print("\nSorted array by Selection Sort: ");
-        for(int i : arr){
-            System.out.print(i + " ");
-        }
-
-        // insertionSort(arr);
-        // System.out.print("\nSorted array by Insertion Sort: ");
+        // selectionSort(arr);
+        // System.out.print("\nSorted array by Selection Sort: ");
         // for(int i : arr){
         //     System.out.print(i + " ");
         // }
+
+        insertionSort(arr);
+        System.out.print("\nSorted array by Insertion Sort: ");
+        for(int i : arr){
+            System.out.print(i + " ");
+        }
     }
 }
