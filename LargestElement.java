@@ -12,7 +12,9 @@ public class LargestElement{
         return largest;
     }
     public static void main(String[] args){
-        int[] arr = {-2,-1,-4,-5,-8,-3,0};
+        int[] arr = {
+    Integer.MAX_VALUE
+};
         System.out.println(largest(arr));
     }
 }
