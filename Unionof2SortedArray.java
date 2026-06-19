@@ -9,19 +9,20 @@ public class Unionof2SortedArray{
         //set unordered hoga agr hashset ka use kra toh isiliye treeset use kr lena chaiye as treeset ordered with unique hota h..
         Set<Integer> set = new TreeSet<>();
 
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n;i++){ // tree set single time complexity O(logn) so here for n we have O(nlogn) 
             set.add(a[i]);
         }
 
         System.out.println(set + "-----------\n");
 
         for(int i=0;i<m;i++){
-            set.add(b[i]);
+            set.add(b[i]);  // we have O(mlogn) 
         }
 
         System.out.println(set + "-----------\n");
 
-        ArrayList<Integer> union = new ArrayList<>(set);
+        ArrayList<Integer> union = new ArrayList<>(set);// tc for converting set to list = O(n+m)
+         //space = for set O(n+m) 
 
 
         return union;
