@@ -42,7 +42,7 @@ public class Sorting{
         int n = arr.length;
         //i =1 se start hoga kyuki 0 se start krne pr sorted part me ek element hoga ar prev = -1 nhi hoga
         for(int i=1;i<n;i++){
-            int curr =i;
+            // int curr =i;
             int prev = i-1;
             int currValue = arr[i];
             //jb currValue chota h prev wale element se to usko shift krte raho
