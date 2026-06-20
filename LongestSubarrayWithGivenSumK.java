@@ -5,7 +5,7 @@ public class LongestSubarrayWithGivenSumK {
         int maxSize =0;
 
         for(int i=0;i<n-1;i++){
-            int j=i+1;
+            int j=i;
             while(j<n){
                 int sum=0;
                 int size =0;
@@ -31,6 +31,6 @@ public class LongestSubarrayWithGivenSumK {
     }
     public static void main(String[] args) {
         int[] arr = {-5, 8, -14, 2, 4, 12};
-        System.out.println(longestSubArray(arr,-5));
+        System.out.println(longestSubArray(arr,8));
     }
 }
