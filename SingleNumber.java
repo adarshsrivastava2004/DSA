@@ -4,20 +4,27 @@ import java.util.Map;
 public class SingleNumber {
     public int singleNumber(int[] nums) {
         //hashmap wala solution... hr ek ka freq count store then value jiska one uska key return 
-        HashMap<Integer,Integer> map = new HashMap<>();
-        int n = 0;
-        for(int num :nums){
-            map.put(num,map.getOrDefault(num,0)+1);
-        }
-        for(Map.Entry<Integer,Integer> entry : map.entrySet()){
-            int key = entry.getKey();
-            int value = entry.getValue();
+        // HashMap<Integer,Integer> map = new HashMap<>();
+        // int n = 0;
+        // for(int num :nums){
+        //     map.put(num,map.getOrDefault(num,0)+1);
+        // }
+        // for(Map.Entry<Integer,Integer> entry : map.entrySet()){
+        //     int key = entry.getKey();
+        //     int value = entry.getValue();
 
-            if(value==1){
-                n = key;
-            }
+        //     if(value==1){
+        //         n = key;
+        //     }
+        // }
+        // return n;
+
+
+        int result =0;
+        for(int num : nums){
+            result^=num;
         }
-        return n;
+        return result;
     }
 
     public static void main(String[] args) {
