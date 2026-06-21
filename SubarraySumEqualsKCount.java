@@ -30,7 +30,7 @@ public class SubarraySumEqualsKCount {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,-1,0};
-        System.out.println(subarraySum(arr, 0));
+        int[] arr = {10,5,2,7,1,-10};
+        System.out.println(subarraySum(arr, 15));
     }
 }
