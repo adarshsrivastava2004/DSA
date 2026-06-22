@@ -12,31 +12,29 @@ public class MaximumSubarraySumInAnArray{
 
         for(int i=0;i<n;i++){
 
-            
+            if(sum==0){
+                start = i;
+            }
             sum+=arr[i];
+            if(sum>maxSum){
+                maxSum = sum;
+                ansStart = start;
+                ansEnd = i;
+            }
+            
             if(sum<0){
                 sum=0;
-            } else {
-                maxSum = Math.max(maxSum,sum);
-            }
         }
-        if(maxSum==0){
-            int largest = Integer.MIN_VALUE;
-            for(int i=0;i<n;i++){
-                if(arr[i]>largest){
-                    largest=arr[i];
-                }
-                ans = largest;
-            }
-        }
-        else {
-            ans = maxSum;
-        }  
-        return ans;
-
     }
+    System.out.print("The subarray is: [");
+    for (int i = ansStart; i <= ansEnd; i++) {
+        System.out.print(arr[i] + " ");
+    }
+    System.out.println("] with sum: " + maxSum);
+    return maxSum;
+}
     public static void main(String[] args) {
-        int[] arr = {5,4,-1,7,8};
-        System.out.println(maximumSubarraySumInAnArray(arr));
+        int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4 };
+        maximumSubarraySumInAnArray(arr);
     }
 }
