@@ -11,6 +11,9 @@ public class LongestConsecutiveSequence {
     }
     public static int longestConsecutiveSequence(int[] arr){
         int n = arr.length;
+        if(n==0){
+            return 0;
+        }
         int longest = 1;
 
 
@@ -28,7 +31,7 @@ public class LongestConsecutiveSequence {
         
     }
     public static void main(String[] args) {
-        int[] arr = {1,0,1,2};
+        int[] arr = {};
 
         System.out.println(longestConsecutiveSequence(arr));
         
