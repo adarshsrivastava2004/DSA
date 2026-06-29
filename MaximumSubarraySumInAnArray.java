@@ -4,7 +4,7 @@ public class MaximumSubarraySumInAnArray{
         int n = arr.length;
         int sum =0;
         int maxSum=0;
-        int ans = 0;
+        // int ans = 0;
 
         int start = 0;
 

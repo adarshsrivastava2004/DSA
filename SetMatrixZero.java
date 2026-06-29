@@ -1,4 +1,4 @@
-import java.util.*;
+// import java.util.*;
 
 public class SetMatrixZero {
     // Function to set entire row and column to 0 if an element in the matrix is 0
